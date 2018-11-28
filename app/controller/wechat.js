@@ -67,7 +67,7 @@ class WechatController extends Controller {
          * Content: '6',
          * MsgId: '6494513464291382253' }
          */
-        logger.info('message = %o', message);
+        app.logger.info('message = %o', message);
         /**
          * 相应请求并且不回复内容场景下进行如下二选一回复即可
          * 1、直接回复success（推荐方式）

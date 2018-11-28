@@ -12,4 +12,4 @@ run/
 *.un~
 config.prod.js
 admin.md
-
+nginx.conf

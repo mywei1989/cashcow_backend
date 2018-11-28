@@ -6,7 +6,7 @@ module.exports = app => {
   app.beforeStart(async () => {
     // 应用会等待这个函数执行完成才启动
     try{
-      app.OAuth = new OAuth(app.config.wx_appid,app.config.wx_secret);
+      app.OAuth = new OAuth(app.config.wechat.appid, app.config.wechat.secret);
     }catch(e){
       app.logger.error('new OAuth error', e);
     }
