@@ -11,5 +11,5 @@ run/
 *.sw*
 *.un~
 config.prod.js
-
+admin.md
 
