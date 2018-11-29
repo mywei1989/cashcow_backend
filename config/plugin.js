@@ -2,6 +2,7 @@
 
 // had enabled by egg
 // exports.static = true;
+
 // exports.wechatApi = {
 //   enable: true,
 //   package: 'egg-wechat-api',

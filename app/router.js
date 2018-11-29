@@ -9,4 +9,5 @@ module.exports = app => {
   router.all('/wechat', controller.wechat.index);
   router.get('/authorizeURL', controller.wechat.authorizeURL);
   router.get('/jssdk', controller.wechat.jssdk);
+  router.get('/test',controller.test.index);
 };
