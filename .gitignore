@@ -10,6 +10,7 @@ run/
 .DS_Store
 *.sw*
 *.un~
+config.default.js
 config.prod.js
 admin.md
 nginx.conf
