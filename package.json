@@ -5,11 +5,12 @@
   "private": true,
   "dependencies": {
     "co-wechat": "^2.3.0",
-    "co-wechat-api": "^3.8.1",
     "co-wechat-oauth": "^2.0.1",
     "egg": "^2.2.1",
+    "egg-redis": "^2.1.0",
     "egg-scripts": "^2.5.0",
-    "egg-view-ejs": "^2.0.0"
+    "egg-view-ejs": "^2.0.0",
+    "egg-wechat-api": "^1.2.2"
   },
   "devDependencies": {
     "autod": "^3.0.1",
