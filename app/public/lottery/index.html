@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>抽奖</title>
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
 	<link href="css/prize.css" type="text/css" rel="stylesheet">
 </head>
 <body class="prize">
@@ -32,7 +32,13 @@
 			</div>
 		</div>
 </div>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.8.6/fingerprint2.min.js"></script>
 <script type="text/javascript">
+new Fingerprint2().get(function(result, components) {
+  console.log(result) // a hash, representing your device fingerprint
+})
+
 var lottery={
     index:-1,    //当前转动到哪个位置，起点位置
     count:0,    //总共有多少个位置

@@ -11,9 +11,9 @@ module.exports = app => {
     //   app.logger.error('new OAuth error', e);
     // }
     // console.log(a);
-    const ctx = app.createAnonymousContext();
-    let result = await ctx.service.wechat.menu.createMenu();
-    console.log(result);
+    // const ctx = app.createAnonymousContext();
+    // let result = await ctx.service.wechat.menu.createMenu();
+    // console.log(result);
   });
 };
 
