@@ -4,7 +4,6 @@ const OAuth = require('co-wechat-oauth');
 
 module.exports = app => {
   app.beforeStart(async () => {
-    应用会等待这个函数执行完成才启动
     try{
       app.OAuth = new OAuth(app.config.wechat.appid, app.config.wechat.secret);
     }catch(e){
