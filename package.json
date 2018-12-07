@@ -5,7 +5,6 @@
   "private": true,
   "dependencies": {
     "co-wechat": "^2.3.0",
-    "co-wechat-oauth": "^2.0.1",
     "egg": "^2.2.1",
     "egg-mongoose": "^3.1.1",
     "egg-redis": "^2.1.0",

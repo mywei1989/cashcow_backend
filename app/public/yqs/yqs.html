@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    !function () { var a = "@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}", b = document.createElement("style"); if (document.getElementsByTagName("head")[0].appendChild(b), b.styleSheet) b.styleSheet.disabled || (b.styleSheet.cssText = a); else try { b.innerHTML = a } catch (c) { b.innerText = a } }(); !function (a, b) { function c() { var b = f.getBoundingClientRect().width; b / i > 540 && (b = 540 * i); var c = b / 10; f.style.fontSize = c + "px", k.rem = a.rem = c } var d, e = a.document, f = e.documentElement, g = e.querySelector('meta[name="viewport"]'), h = e.querySelector('meta[name="flexible"]'), i = 0, j = 0, k = b.flexible || (b.flexible = {}); if (g) { console.warn("将根据已有的meta标签来设置缩放比例"); var l = g.getAttribute("content").match(/initial\-scale=([\d\.]+)/); l && (j = parseFloat(l[1]), i = parseInt(1 / j)) } else if (h) { var m = h.getAttribute("content"); if (m) { var n = m.match(/initial\-dpr=([\d\.]+)/), o = m.match(/maximum\-dpr=([\d\.]+)/); n && (i = parseFloat(n[1]), j = parseFloat((1 / i).toFixed(2))), o && (i = parseFloat(o[1]), j = parseFloat((1 / i).toFixed(2))) } } if (!i && !j) { var p = (a.navigator.appVersion.match(/android/gi), a.navigator.appVersion.match(/iphone/gi)), q = a.devicePixelRatio; i = p ? q >= 3 && (!i || i >= 3) ? 3 : q >= 2 && (!i || i >= 2) ? 2 : 1 : 1, j = 1 / i } if (f.setAttribute("data-dpr", i), !g) if (g = e.createElement("meta"), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + j + ", maximum-scale=" + j + ", minimum-scale=" + j + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g); else { var r = e.createElement("div"); r.appendChild(g), e.write(r.innerHTML) } a.addEventListener("resize", function () { clearTimeout(d), d = setTimeout(c, 300) }, !1), a.addEventListener("pageshow", function (a) { a.persisted && (clearTimeout(d), d = setTimeout(c, 300)) }, !1), "complete" === e.readyState ? e.body.style.fontSize = 12 * i + "px" : e.addEventListener("DOMContentLoaded", function () { e.body.style.fontSize = 12 * i + "px" }, !1), c(), k.dpr = a.dpr = i, k.refreshRem = c, k.rem2px = function (a) { var b = parseFloat(a) * this.rem; return "string" == typeof a && a.match(/rem$/) && (b += "px"), b }, k.px2rem = function (a) { var b = parseFloat(a) / this.rem; return "string" == typeof a && a.match(/px$/) && (b += "rem"), b } }(window, window.lib || (window.lib = {}));
+  </script>
+
+  <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
+<link href="/./css/yqs-css.2580504.css" rel="stylesheet"></head>
+
+<body>
+  <div class="main">
+    <div class="kljgg">
+      <a href="javascript:void(0);" class="myprize showrolebox"></a>
+      <!-- <a href="javascript:void(0);" class="rolebtn showrolebox"></a> -->
+      <a href="javascript:void(0);" class="lefttimes showrolebox">
+        今日剩余抽奖次数:2
+      </a>
+    </div>
+    <div class="jggbox">
+      <div class="cont clearfix" id="lottery">
+        <table>
+          <tr>
+            <td class="lottery-unit lottery-unit-0">
+              <div class="prv">
+                <img src="./images/re_3.png">
+              </div>
+            </td>
+            <td class="lottery-unit lottery-unit-1">
+              <div class="prv">
+                <img src="./images/re_5.png">
+              </div>
+            </td>
+            <td class="lottery-unit lottery-unit-2">
+              <div class="prv">
+                <img src="./images/re_0.5.png">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="lottery-unit lottery-unit-7">
+              <div class="prv">
+                <img src="./images/re_10.png">
+              </div>
+            </td>
+            <td>
+              <a class="btnStart" href="javascript:void(0);" id="start">
+            </td>
+            <td class="lottery-unit lottery-unit-3">
+              <div class="prv"><img src="./images/re_2.png">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="lottery-unit lottery-unit-6">
+              <div class="prv"><img src="./images/re_1.png">
+
+              </div>
+            </td>
+            <td class="lottery-unit lottery-unit-5">
+              <div class="prv">
+                <img src="./images/re_20.png">
+              </div>
+            </td>
+            <td class="lottery-unit lottery-unit-4">
+              <div class="prv"><img src="./images/re_0.3.png">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="sharecontent clearfix text-center wihte f-sm">
+      <a class="btnShare" href="javascript:;"></a>
+      <i class="showtimes"></i>
+      <p class="f-md white">每天分享最多获取2次抽奖机会</p>
+    </div>
+    <div class="rulecontent clearfix text-left wihte f-sm">
+      <p class="f-md yellow">规则说明</p>
+      <p class="f-sm white">1.每位用户每天有<span class="yellow">2次</span>免费抽奖机会,参与活动可100%中现金红包：</p>
+      <p class="f-sm white">2.中奖后，需<span class="yellow">关注微信公众号</span>领取现金红包：</p>
+      <p class="f-sm white">3.分享至朋友圈或微信好友，即可获得<span class="yellow">2次抽奖</span>机会:</p>
+      <p class="f-sm white">4.可在活动页面“我的奖品”中查看所获奖品：</p>
+    </div>
+  </div>
+  <div class="cover"></div>
+
+  <div class="giftbg">
+    <a href="javascript:void(0);" class="icon closegift icon-close"></a>
+    <p class="f-big white text-center">恭喜您</p>
+    <p class="f-md white text-center">获得<span class="yellow">5元</span>现金红包</p>
+    <i class="qrcode"></i>
+    <p class="fd-md white text-center">关注公众号回复(口令号)</p>
+    <p></p>
+    <a class="btnGetGift white text-center " href="javascript:;">立即获取</a>
+  </div>
+  <div class="giftlist">
+
+  </div>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+  <script type="text/javascript">
+
+
+
+
+
+    var lottery = {
+      index: 0,	//当前转动到哪个位置
+      count: 9,	//总共有多少个位置
+      timer: 0,	//setTimeout的ID，用clearTimeout清除
+      speed: 200,	//初始转动速度
+      times: 0,	//转动次数
+      cycle: 21,	//转动基本次数：即至少需要转动多少次再进入抽奖环节
+      prize: 4,	//中奖位置
+      init: function (id) {
+        if ($("#" + id).find(".lottery-unit").length > 0) {
+          $lottery = $("#" + id);
+          $units = $lottery.find(".lottery-unit");
+          this.obj = $lottery;
+          this.count = $units.length;
+          $lottery.find(".lottery-unit-" + this.index).addClass("active");
+        };
+      },
+      roll: function () {
+        var index = this.index;
+        var count = this.count;
+        var lottery = this.obj;
+        $(lottery).find(".lottery-unit-" + index).removeClass("active");
+        index += 1;
+        if (index > count - 1) {
+          index = 0;
+        };
+        $(lottery).find(".lottery-unit-" + index).addClass("active");
+        this.index = index;
+        return false;
+      },
+      stop: function (index) {
+        this.prize = index;
+        return false;
+      }
+    };
+    function roll() {
+      lottery.times += 1;
+      lottery.roll();
+      if (lottery.times > lottery.cycle + 10 && lottery.prize == lottery.index) {
+        $('#giftname').html(p);
+        $('#giftimg').attr('src', './images/jgift0' + n + '.png');
+        showgiftbox();
+        //alert(lottery.prize+' / '+lottery.index);
+        clearTimeout(lottery.timer);
+        //lottery.prize=4;
+        lottery.times = 0;
+        click = false;
+      } else {
+        if (lottery.times < lottery.cycle) {
+          lottery.speed -= 10;
+        } else if (lottery.times == lottery.cycle) {
+          //var index = Math.random()*(lottery.count)|0;
+          //lottery.prize = index;
+        } else {
+          if (lottery.times > lottery.cycle + 10 && ((lottery.prize == 0 && lottery.index == 7) || lottery.prize == lottery.index + 1)) {
+            lottery.speed += 110;
+          } else {
+            lottery.speed += 20;
+          }
+        }
+        if (lottery.speed < 40) {
+          lottery.speed = 40;
+        };
+        //console.log(lottery.times+'^^^^^^'+lottery.speed+'^^^^^^^'+lottery.prize);
+        lottery.timer = setTimeout(roll, lottery.speed);
+      }
+      return false;
+    }
+    var click = false;
+    var n = 6;
+    var p = '五等奖';
+    $(function () {
+      $.ajax({
+        url:'/jssdk',
+        type: 'GET',
+        data:{
+          url:'http://yqs.huijushanhe.com/public/yqs/yqs.html'
+        },
+        success: function(res){
+          console.log(res);
+        }
+      })
+
+
+
+      //$('.giftbg').show()
+      $('#start').click(function () {
+        if (click) { return false; }
+        lottery.init('lottery');
+        lottery.speed = 100;
+        lottery.prize = 2;
+        roll();
+        // $.ajax({
+        //   url: "/index.php/Chou/giftjgg.html",
+        //   type: "POST",
+        //   error: function () {
+        //     alert('出错了');
+        //   },
+        //   success: function (d) {
+        //     var a = d.angle;
+        //     p = d.prize;
+        //     n = d.giftid;
+        //     var s = d.stoped;
+        //     lottery.init('lottery');
+        //     lottery.speed = 100;
+        //     lottery.prize = s;
+        //     click = true;
+        //     roll();
+        //   }
+        // });
+      });
+
+      $('.getgift').click(function () {
+        if ($(this).hasClass('notread')) {
+
+        } else {
+          hidegiftbox();
+        }
+      });
+      //关闭
+      $('.closegift').click(function () {
+        hidegiftbox();
+      });
+      //规则
+      $('.showrolebox').click(function () {
+        showrolebox();
+      });
+      $('.closerolebox').click(function () {
+        hiderolebox();
+      });
+    });
+    function showgiftbox() {
+      $('.cover').fadeIn(500, function () {
+        $('.giftbg').show()
+      });
+    }
+    function hidegiftbox() {
+      $('.giftout,.giftbg,.giftclose').hide(function () {
+        $('.cover').fadeOut();
+      });
+    }
+    function showrolebox() {
+      $('.cover').fadeIn();
+      $('.rolebox').show();
+    }
+    function hiderolebox() {
+      $('.rolebox').hide(function () {
+        $('.cover').fadeOut();
+      });
+    }
+  </script>
+<script type="text/javascript" src="/js/yqs.8ddb71c.bundle.js"></script></body>
+
+</html>

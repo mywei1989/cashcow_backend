@@ -1,7 +1,5 @@
 'use strict'
 
-const OAuth = require('co-wechat-oauth');
-
 module.exports = app => {
   app.beforeStart(async () => {
     // try{
