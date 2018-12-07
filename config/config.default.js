@@ -28,16 +28,45 @@ module.exports = appInfo => {
   config.wechatApi = {
     appId: '',
     appSecret: '',
+    adapter: '',
+    redisInstance:''
   };
 
   config.redis = {
-    client: {
-      port: 6379, // Redis port
-      host: '127.0.0.1', // Redis host
-      password: 'null',
-      db: 0,
+    clients: {
+      wechat: {                 // instanceName. See below
+        port: 16379,          // Redis port
+        host: '127.0.0.1',   // Redis host
+        password: 'cashcow',
+        db: 0,
+      },
+      redenvelope:{
+        port: 16379, // Redis port
+        host: '127.0.0.1', // Redis host
+        password: 'cashcow',
+        db: 1,
+      },
+      test:{
+        port: 16379, // Redis port
+        host: '127.0.0.1', // Redis host
+        password: 'cashcow',
+        db: 15,
+      }
     },
   };
+
+  config.mongoose = {
+    clients: {
+      // redEnvelope: {
+      //   url: 'mongodb://127.0.0.1:37017/redEnvelope',
+      //   options: {},
+      // }
+      redEnvelope: {
+        url: 'mongodb://127.0.0.1:37017/redEnvelope',
+        options: {},
+      }
+    },
+  }
 
   // view ejs engine config
   config.view = {
@@ -54,6 +83,34 @@ module.exports = appInfo => {
     delimiter: null,
     strict: false,
   };
+
+  config.static = {
+  };
+
+  config.wechat.menu = {
+    button: [
+      {
+        type: "view",
+        name: "静雅听书",
+        url: "https://jybaoming.v5.com/distribute/index?d=203399",
+        sub_button: []
+      },
+      {
+        type: "view",
+        name: "九块九",
+        url: "https://teach.98u.com/wx/?#/lesson/channel/CA2714160649994429300163E130B4C6?channel_id=203403&s=1",
+        sub_button: []
+      },
+      {
+        type: "view",
+        name: "微撩",
+        url: "https://teach.98u.com/wx/?#/lesson/channel/CA154916442653958700163E130B4C10?channel_id=203404&s=1",
+        sub_button: []
+      }
+    ]
+
+  }
+
 
   return config;
 };
